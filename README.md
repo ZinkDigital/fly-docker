@@ -20,7 +20,7 @@ run the fly image in this way.
 
 ## Mac OS
 
-If you are running on MacOS to connect your fly client to to server use the ip address given by running.
+If you are running on MacOS to connect your fly client to the server image use the ip address given by running.
 
 ```
 > docker-machine ls
