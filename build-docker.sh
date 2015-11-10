@@ -21,5 +21,14 @@ docker build -t fly-object-space .
 # delete the local executable
 rm -rf fly
 
-# push the docker image to a the registry
 
+
+# Then Push the docker image to a the docker registry
+# ===================================================
+
+# Tag the latest image
+# docker images    // to get the the image ID
+# the use the image id as below
+# docker tag 47311f5a5179 zink/fly-object-space:latest
+# docker login --username=zink --password=the_password --email=nige@zinkdigital.com
+# docker push zink/fly-object-space
