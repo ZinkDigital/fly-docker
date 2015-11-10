@@ -18,9 +18,13 @@ run the fly image in this way.
 > docker run -p 4396:4396 zink/fly
 ```
 
-## Mac OS
+### Fly Server Discovery
 
-If you are running on MacOS to connect your fly client to the server image use the ip address given by running.
+For some local network configuration the above will be enough in order for the fly client software to discover and 
+use the fly server running in the docker image.
+ 
+However in some cases it will be necessary to configure the FlyFactory in the client with the IP address of the 
+running docker container. 
 
 ```
 > docker-machine ls
