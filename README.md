@@ -18,22 +18,27 @@ run the fly image in this way.
 > docker run -p 4396:4396 zink/fly
 ```
 
+## Mac OS
+
 If you are running on MacOS to connect your fly client to to server use the ip address given by running.
 
 ```
 > docker-machine ls
 ```
 
-`
+And find the address of the running docker container 
+
+```
 NAME      ACTIVE   DRIVER       STATE     URL                         SWARM
 default   *        virtualbox   Running   tcp://192.168.99.100:2376   
-`
+```
 
-In this case this is 192.168.99.100, hence in Java 
+In this case this is 192.168.99.100. Which would result in the following configuration of the FlyFactory in the client code.
 
 ```
 Fly fly = FlyFactory.makeFly("192.168.99.100");
 ```
+
 
 
 
