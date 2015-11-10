@@ -5,7 +5,7 @@ A runnable docker image that contains the Fly Object Space.
 There are two ways to configure your local network when running the Fly image.
  
 ```bash
-docker run --net="host" zink/fly-object-space
+docker run --net="host" zink/fly
 ```
 
 This way allows the Fly server to access the host network stack this has two advantages in that 
@@ -18,6 +18,6 @@ However if you want the continer to be isolated for security or other seperation
  in this way.
  
 ```bash
-docker run -p 4396:4396 zink/fly-object-space
+docker run -p 4396:4396 zink/fly
 ```
 
