@@ -20,28 +20,19 @@ run the fly image in this way.
 
 ### Fly Server Discovery
 
-For some local network configuration the above will be enough in order for the fly client software to discover and 
-use the fly server running in the docker image.
+For some local network configurations the above will be enough in order for the fly client software to discover and 
+use the fly server running in the docker image, using multicast discovery.
  
 However in some cases it will be necessary to configure the FlyFactory in the client with the IP address of the 
-running docker container. 
-
-```
-> docker-machine ls
-```
-
-And find the address of the running docker container 
-
-```
-NAME      ACTIVE   DRIVER       STATE     URL                         SWARM
-default   *        virtualbox   Running   tcp://192.168.99.100:2376   
-```
-
-In this case this is 192.168.99.100. Which would result in the following configuration of the FlyFactory in the client code.
+running docker container. e.g. 
 
 ```
 Fly fly = FlyFactory.makeFly("192.168.99.100");
 ```
+
+For more recent versions of docker this will be the current network address of the host machine which gets redirected 
+through the default bridge (bridge0) to the running container(s).
+
 
 
 
